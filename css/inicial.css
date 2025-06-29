@@ -1,0 +1,137 @@
+:root {
+  --primary-color: rgb(199, 129, 0);
+  --dark-bg-color: rgba(51, 51, 51, 0.5);
+  --font-poppins: 'Poppins', sans-serif;
+  --transition-speed: 0.5s;
+  --initial-bg-image: url('../assets/imagem-theme/bg/banner-tela-inicial.jpg');
+
+  font-size: 16px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image: url('../assets/imagem-theme/bg/banner-tela-inicial.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.7s ease-in;
+}
+
+.container-welcome-user {
+  padding: 5vmin;
+  background-color: var(--dark-bg-color);
+  border-radius: 20px;
+
+  margin: 20px auto;
+}
+
+.h1-title {
+  margin: 0;
+  padding: 0.8vmin;
+  text-align: center;
+  color: var(--primary-color);
+
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.h3-title {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shadow-container {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  box-shadow: 10px 10px 10px red;
+}
+
+.container-images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5vh 20vh;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.img-emblema {
+  width: 40vmin;
+  height: 40vmin;
+
+  max-width: 200px;
+  min-width: 120px;
+
+  max-height: 200px;
+  min-height: 120px;
+
+  object-fit: contain;
+  cursor: pointer;
+  overflow: hidden;
+
+  border-radius: 50%;
+  padding: 1rem;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.img-emblema:hover {
+  transform: translateY(-10px);
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); */
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+@media screen and (max-width: 580px) {
+  :root {
+    font-size: 13px;
+  }
+
+  .container-welcome-user {
+    width: 80%;
+  }
+
+  .h1-title {
+    font-size: 1.8rem;
+  }
+
+  .h3-title {
+    font-size: 1rem;
+  }
+
+  .container-images {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .img-emblema {
+    width: 35vw;
+    height: 35vw;
+    max-width: 200px;
+    max-height: 200px;
+  }
+}

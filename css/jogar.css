@@ -1,0 +1,238 @@
+#bg-screen {
+  margin: 5vmin;
+  width: 80vw;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+
+  box-sizing: border-box;
+}
+
+#loading-screen {
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  z-index: 100;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#container-tentativas-retantes {
+  text-align: center;
+  margin-inline: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  color: #fff;
+}
+
+#container-mensagem-usuario {
+  position: absolute;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 20px 20px 0 20px;
+  top: 15%;
+  left: 5%;
+  min-width: 30%;
+  font-size: 1em;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out,
+    transform 0.3s ease-out;
+}
+
+#mensagem-usuario {
+  margin: 0;
+  padding: 0;
+}
+
+#mensagem-orientacao {
+  padding-bottom: 20px;
+}
+
+.esconde-container {
+  opacity: 0;
+  display: none;
+}
+
+.mostra-container {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+#h3RegraJogo {
+  color: #dcdcdc;
+  margin: 0;
+  /* width: 50%; */
+  /* background-color: red; */
+  font-weight: 300;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.gif-jogadores {
+  width: min-content;
+  height: 60vh;
+  margin-inline: auto;
+  border-radius: 25px;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 15px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::placeholder {
+  color: #bbb;
+}
+
+#forms {
+  display: block;
+  text-align: left;
+}
+
+#forms > label {
+  margin: 5px 0;
+  color: #dcdcdc;
+  font-size: 1em;
+}
+
+#container-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 20px;
+}
+
+#mudar-dificuldade {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  min-width: 20%;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+#mudar-dificuldade:hover {
+  background-color: #dcdcdc22;
+}
+
+#btn-jogar-novamente {
+  background-color: #571ae6;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+#btn-jogar-novamente:hover {
+  background-color: #3d11a1;
+}
+
+#btn-chutar {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+  min-width: 40%;
+}
+
+#btn-chutar:hover {
+  /* background-color: #644b00; */
+  background-color: var(--button-bg-hover);
+}
+
+@media screen and (max-width: 580px) {
+  #bg-screen {
+    width: 90%;
+  }
+
+  #h1 {
+    font-size: 2em;
+    margin-top: 5vmin;
+  }
+
+  #h3RegraJogo {
+    font-size: 1rem;
+    width: 95%;
+  }
+
+  .gif-jogadores {
+    width: 90%;
+    height: auto;
+  }
+
+  #container-mensagem-usuario {
+    min-width: 80%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+  }
+
+  #container-mensagem-usuario::after {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .message-top-left {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #container-buttons {
+    flex-direction: column;
+  }
+
+  #btn-chutar {
+    width: 100%;
+  }
+
+  #mudar-dificuldade {
+    width: 100%;
+  }
+}

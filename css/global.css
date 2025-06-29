@@ -1,0 +1,96 @@
+.bg-default {
+  background-image: url('../assets/imagem-theme/bg/banner-tela-inicial.jpg');
+}
+
+.bg-yamal {
+  background-image: url('../assets/imagem-theme/jogadores/yamal-banner.jpg');
+  /* background-color: red; */
+}
+
+#btn-toggle {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
+#toggle {
+  width: 25px;
+  height: 25px;
+}
+
+.barcelona-color {
+  color: #da1a32;
+}
+
+.madrid-color {
+  color: #febe10;
+}
+
+.city-color {
+  color: #6cabdd;
+}
+
+.bg-vini {
+  background-image: url('../assets/imagem-theme/jogadores/banner-vinicius-junior.webp');
+}
+
+.bg-foden {
+  background-image: url('../assets/imagem-theme/jogadores/foden-banner.webp');
+}
+
+.transition-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.transition-bg.show {
+  opacity: 1;
+}
+
+.animate-zoom-in {
+  animation: fadeIn 6s ease-in-out forwards;
+  animation: fadeIn 1.2s ease-in-out forwards;
+  z-index: 100;
+}
+
+.animate-zoom-out {
+  animation: fadeOut 1.2s ease-in-out forwards;
+  z-index: 100;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0.2;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,75 @@
+#title {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#container-mensagem {
+  width: 100%;
+}
+
+.p-message {
+  background-color: lightcyan;
+  min-width: 80%;
+  border-radius: 20px;
+  padding: 10px;
+  margin-inline: auto;
+  overflow: hidden;
+  opacity: 0.1;
+
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.mostra-mensagem {
+  opacity: 1;
+}
+
+#container-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.difficulty-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 20px 30px;
+
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 80%;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.difficulty-button:hover {
+  color: #212529;
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#message-user {
+  display: block;
+  background-color: lightblue;
+}
+
+#easy {
+  /* background-color: red; */
+}
+
+#medium {
+  /* background-color: yellow; */
+}
+
+#hard {
+  /* background-color: blue; */
+}
