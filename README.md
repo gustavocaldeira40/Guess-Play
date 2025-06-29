@@ -6,6 +6,10 @@
   <img src="assets/guess-play/guess-play.png" alt="GuessPlay Icon" width="100"/>
 </p>
 
+## Live Demo
+
+[![Live Demo](https://img.shields.io/badge/-Access%20Live%20Demo-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://guess-play-94r44cay4-gustavocaldeira40s-projects.vercel.app/)
+
 ## About the Project
 
 **GuessPlay** is a captivating and interactive guessing game **entirely focused on the world of football, strongly inspired by FIFA teams and stars!** You will test your knowledge and skills against an Artificial Intelligence opponent: **"The Robot"**. Dive into a fun experience where you try to guess a secret number while the Robot tries to guess yours — all set with visual elements from clubs like **Barcelona, Real Madrid, and Manchester City**, celebrating players such as **Lamine Yamal, Vinicius Jr., and Phil Foden**. With different difficulty levels and animated visual feedback, GuessPlay promises hours of challenging entertainment for football fans and game lovers!
