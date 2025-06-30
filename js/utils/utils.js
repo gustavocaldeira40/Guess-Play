@@ -45,6 +45,8 @@ document.addEventListener('mousemove', userInteractionListener);
 document.addEventListener('click', userInteractionListener);
 document.addEventListener('keydown', userInteractionListener);
 
+const getFileName = (path) => path.split('/').pop();
+
 export const setupBackgroundMusic = (pathMusic, volumn) => {
   const savedMuted = getItem('isMuted');
   isMuted = savedMuted === true || savedMuted === 'true';
@@ -55,16 +57,20 @@ export const setupBackgroundMusic = (pathMusic, volumn) => {
     originalVolume = 0.2;
   }
 
-  if (backgroundMusic && backgroundMusic.src.endsWith(pathMusic)) {
+  const newFile = getFileName(pathMusic);
+  const currentFile = backgroundMusic ? getFileName(backgroundMusic.src) : null;
+
+  if (backgroundMusic && newFile !== currentFile) {
+    backgroundMusic.pause();
+    backgroundMusic = null;
+    console.log('Música anterior parada porque a nova é diferente.');
+  }
+
+  if (backgroundMusic && newFile === currentFile) {
     if (hasInteracted && backgroundMusic.paused) {
       tocaMusica();
     }
     return;
-  }
-
-  if (backgroundMusic) {
-    stopBackgroundMusic();
-    backgroundMusic = null;
   }
 
   backgroundMusic = new Audio(pathMusic);

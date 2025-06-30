@@ -5,7 +5,6 @@ import {
   criaToggleMusica,
   removeBackgroundThemeClasses,
   setupBackgroundMusic,
-  stopBackgroundMusic,
   toggleMusic,
   transitionScreens,
 } from './utils.js';
@@ -37,10 +36,8 @@ export const navigateTo = (
   if (!screens[screenName]) return;
 
   if (screenName === 'play') {
-    stopBackgroundMusic();
     setupBackgroundMusic('../../assets/audio/ambiente.mp3');
   } else {
-    stopBackgroundMusic();
     setupBackgroundMusic('../../assets/audio/music_fifa22.mp3');
   }
 

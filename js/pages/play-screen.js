@@ -1,11 +1,6 @@
 import { getItem } from '../utils/local-storage.js';
 import { navigateTo } from '../utils/navigateTo.js';
-import {
-  buscaTema,
-  setaCor,
-  setupBackgroundMusic,
-  stopBackgroundMusic,
-} from '../utils/utils.js';
+import { buscaTema, setaCor, setupBackgroundMusic } from '../utils/utils.js';
 
 export const playScreen = () => {
   let numeroSecreto;
